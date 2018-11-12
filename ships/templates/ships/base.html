@@ -9,7 +9,9 @@
   </head>
   <body>
     <div class="page-header">
+      {% if user.is_authenticated %}
       <a href="{% url 'ship_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+      {% endif %}
       <h1><a href="/">Jason's Battleships</a></h1>
     </div>
     <div class="content container">

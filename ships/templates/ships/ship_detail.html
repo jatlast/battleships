@@ -5,6 +5,9 @@
   <div class="date">
     {{ ship.launchyr }}
   </div>
+  {% if user.is_authenticated %}
+  <a class="btn btn-default" href="{% url 'ship_edit' shipname=ship.shipname %}"><span class="glyphicon glyphicon-pencil"></span></a>
+  {% endif %}
   <h2>{{ ship.shipname }}</h2>
   <p>{{ post.classname|linebreaksbr }}</p>
   {% if ship.condition %}

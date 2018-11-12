@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.utils import timezone
 from .models import vShipClass, vBattle
 
@@ -8,3 +8,6 @@ def ship_list(request):
     ships = vShipClass.objects.all()
     return render(request, 'ships/ship_list.html', {'ships': ships})
 
+def ship_detail(request, shipname):
+    ship = get_object_or_404(vShipClass, shipname=shipname)
+    return render(request, 'ships/ship_detail.html', {'ship': ship})

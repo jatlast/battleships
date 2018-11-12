@@ -1,0 +1,16 @@
+{% extends 'ships/base.html' %}
+
+{% block content %}
+<div class="ship">
+  <div class="date">
+    {{ ship.launchyr }}
+  </div>
+  <h2>{{ ship.shipname }}</h2>
+  <p>{{ post.classname|linebreaksbr }}</p>
+  {% if ship.condition %}
+  <div>
+    Condition: {{ ship.condition }}
+  </div>
+  {% endif %}
+</div>
+{% endblock %}

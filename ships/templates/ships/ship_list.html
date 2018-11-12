@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <title>Jason's CSC 582 App Homework</title>
+  </head>
+  <body>
+    <div>
+      <h1><a href="/">Jason's Battleships</a></h1>
+    </div>
+    {% for ship in ships %}
+    <div>
+      <p>ship name: {{ ship.shipname }}</p>
+      <h2><a href="">{{ ship.shipname }}</a></h2>
+      <p>{{ ship.shipclass|linebreaksbr }}</p>
+    </div>
+    {% endfor %}
+  </body>
+</html>

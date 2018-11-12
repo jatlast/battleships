@@ -11,6 +11,15 @@
   {% else %}
      <button type="submit" class="save btn btn-default">Save</button></td></tr>  
   {% endif %}
+  {% if error_message %}
+  <tr><td colspan="2"><div class="isa_error">{{ error_message }}</div></td></tr>
+  {% endif %}
+  {% if log_message %}
+  <tr><td colspan="2"><div class="isa_warning">{{ log_message }}</div></td></tr>
+  {% endif %}
+  {% if success_message %}
+  <tr><td colspan="2"><div class="isa_success">{{ success_message }}</div></td></tr>
+  {% endif %}
   </table>
 </form>
 {% endblock %}

@@ -54,11 +54,37 @@ CREATE TABLE Outcomes
       CONSTRAINT fkBattles FOREIGN KEY (battle) REFERENCES Battles (battleName)
   );
 
+--------------------------------
+-- Log Table for App homework --
+--------------------------------
+DROP TABLE IF EXISTS ShipsLog;
+
+CREATE TABLE ShipsLog
+  (
+      uid INTEGER PRIMARY KEY,
+      author VARCHAR(32),
+      inserted DATETIME,
+      exceptxt VARCHAR(255),
+      querytxt VARCHAR(255),
+      msgtxt VARCHAR(255),
+      key1 VARCHAR(32),
+      val1 VARCHAR(32),
+      key2 VARCHAR(32),
+      val2 VARCHAR(32),
+      key3 VARCHAR(32),
+      val3 VARCHAR(32),
+      key4 VARCHAR(32),
+      val4 VARCHAR(32),
+      key5 VARCHAR(32),
+      val5 VARCHAR(32)
+   );
+--------------------------------
+								    
 ----------------------------
 -- Views for App homework --
 ----------------------------
-DROP VIEW vShipClass;
-DROP VIEW vBattle;
+DROP VIEW IF EXISTS vShipClass;
+DROP VIEW IF EXISTS vBattle;
 
 CREATE VIEW vShipClass AS
 SELECT c.country, s.shipName, s.launchYr, c.className, c.typeClass, c.numGuns, c.bore, c.displacement, (SELECT MIN(outcome) FROM Outcomes WHERE s.shipName = ship) AS condition

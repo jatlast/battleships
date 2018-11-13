@@ -1,0 +1,38 @@
+{% extends 'ships/base.html' %}
+
+{% block content %}
+{% for log in shipslog_list %}
+<div class="log">
+  <h4>Log entry # <a href="{% url 'log_detail' logid=log.logid %}">{{ log.logid }}</a></h4>
+  <div class="date">
+    created by {{ log.author }} {{ log.inserted }}
+  </div>
+  <div>
+    {% if log.exceptxt %}
+    Exception: {{ log.exceptxt }}<br>
+    {% endif %}
+    {% if log.querytxt %}
+    SQL: {{ log.querytxt }}<br>
+    {% endif %}
+    {% if log.msgtxt %}
+    MSG: {{ log.msgtxt|linebreaksbr }}<br>
+    {% endif %}
+    {% if log.key1 %}
+    {{ log.key1 }}:{{ log.val1 }}<br>
+    {% endif %}
+    {% if log.key2 %}
+    {{ log.key2 }}:{{ log.val2 }}<br>
+    {% endif %}
+    {% if log.key3 %}
+    {{ log.key3 }}:{{ log.val3 }}<br>
+    {% endif %}
+    {% if log.key4 %}
+    {{ log.key4 }}:{{ log.val4 }}<br>
+    {% endif %}
+    {% if log.key5 %}
+    {{ log.key5 }}:{{ log.val5 }}
+    {% endif %}
+  </div>
+</div>
+{% endfor %}
+{% endblock %}

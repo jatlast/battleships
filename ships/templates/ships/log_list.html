@@ -1,13 +1,23 @@
 {% extends 'ships/base.html' %}
 
 {% block content %}
-{% for log in logs %}
+{% for log in log_list %}
 <div class="log">
+  <h4>Log entry # <a href="{% url 'log_detail' logid=log.logid %}">{{ log.logid }}</a></h4>
   <div class="date">
-    <p>Date: {{ ship.inserted }}</p>
+    created by {{ log.author }} {{ log.inserted }}
   </div>
-  <h2><a href="{% url 'log_detail' pk=log.pk %}">{{ log.exceptxt }}</a></h2>
-  <p>MSG: {{ log.msgtext|linebreaksbr }}</p>
+  <div>
+    {% if log.exceptxt %}
+    Exception: {{ log.exceptxt }}
+    {% endif %}
+    {% if log.querytxt %}
+    SQL: {{ log.querytxt }}
+    {% endif %}
+    {% if log.msgtxt %}
+    MSG: {{ log.msgtxt|linebreaksbr }}
+    {% endif %}
+  </div>
 </div>
 {% endfor %}
 {% endblock %}

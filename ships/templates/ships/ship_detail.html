@@ -2,18 +2,36 @@
 
 {% block content %}
 <div class="ship">
-  <div class="date">
-    {{ ship.launchyr }}
-  </div>
-  {% if user.is_authenticated %}
-  <a class="btn btn-default" href="{% url 'ship_edit' shipname=ship.shipname %}"><span class="glyphicon glyphicon-pencil"></span></a>
-  {% endif %}
-  <h2>{{ ship.shipname }}</h2>
-  <p>{{ post.classname|linebreaksbr }}</p>
-  {% if ship.condition %}
-  <div>
-    Condition: {{ ship.condition }}
-  </div>
-  {% endif %}
+  <h1>The {{ ship.shipname }}:</h1>
+  <h4>She is a {{ ship.launchyr }},
+    <!-- Link if shipname != classtype -->
+    {% if ship.shipname != ship.classname %}
+    <a href="{% url 'ship_detail' shipname=ship.classname %}">{{ ship.classname }}</a>
+    {% else %}
+    {{ ship.classname }}
+    {% endif %}
+    class,
+    <!-- rename abbreviated typeclass -->
+    {% if ship.typeclass == 'bb' %}
+    battleship
+    {% elif ship.typeclass == 'bc' %}
+    battlecruiser
+    {% else %}
+    <!-- unknown typeclass (ship.typeclass) -->
+    {% endif %}
+    - built in {{ ship.country }}
+    </h4>
+    <div>
+      She has {{ ship.numguns  }} guns with {{ ship.bore  }} inch bore and ahe displaces {{ ship.displacement }} tons of water.
+    </div>
+    {% if ship.condition %}
+    <div>Last known condition: {{ ship.condition }}</div>
+    {% endif %}
+    <br><a class="btn btn-default" href="{% url 'ship_edit' shipname=ship.shipname %}"><span class="glyphicon glyphicon-pencil"></span></a>
 </div>
 {% endblock %}
+
+<!--
+  {% if user.is_authenticated %}
+  {% endif %}
+-->

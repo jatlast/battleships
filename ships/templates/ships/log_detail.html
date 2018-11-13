@@ -1,0 +1,25 @@
+{% extends 'ships/base.html' %}
+
+{% block content %}
+<div class="log">
+  <h1>Log entry # {{ log.logid }}:</h1>
+  <h4>created by {{ log.author }} {{ log.inserted }}</h4>
+  <div>
+    {% if log.exceptxt %}
+    Exception: {{ log.exceptxt }}
+    {% endif %}
+    {% if log.querytxt %}
+    SQL: {{ log.querytxt }}
+    {% endif %}
+    {% if log.msgtxt %}
+    MSG: {{ log.msgtxt }}
+    {% endif %}
+    </div>
+</div>
+{% endblock %}
+
+<!--
+  {% if user.is_authenticated %}
+  {% endif %}
+    <br><a class="btn btn-default" href="{% url 'log_edit' logname=log.logname %}"><span class="glyphicon glyphicon-pencil"></span></a>
+-->

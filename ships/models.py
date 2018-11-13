@@ -66,5 +66,6 @@ class ShipsLog(models.Model):
     class Meta:
         managed = True
         db_table = 'ShipsLog'
-                                                                                                
+        get_latest_by = 'logid'
+        ordering = ["-logid"]
 

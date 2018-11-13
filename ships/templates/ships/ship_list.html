@@ -3,11 +3,16 @@
 {% block content %}
 {% for ship in ships %}
 <div class="ship">
-  <div class="date">
-    <p>Year: {{ ship.launchyr }}</p>
-  </div>
-  <h2><a href="{% url 'ship_detail' shipname=ship.shipname %}">{{ ship.shipname }}</a></h2>
-  <p>Class: {{ ship.classname|linebreaksbr }}</p>
+  <h3>The {{ ship.launchyr }} <a href="{% url 'ship_detail' shipname=ship.shipname %}">{{ ship.shipname }}</a>:</h3>A 
+    {% if ship.typeclass == 'bb' %}
+    battleship
+    {% elif ship.typeclass == 'bc' %}
+    battlecruiser
+    {% else %}
+    <!-- unknown typeclass (ship.typeclass) -->
+    {% endif %}
+    of class <a href="{% url 'ship_detail' shipname=ship.classname %}">{{ ship.classname }}</a>
 </div>
 {% endfor %}
 {% endblock %}
+

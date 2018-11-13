@@ -9,9 +9,8 @@
   </head>
   <body>
     <div class="page-header">
-      {% if user.is_authenticated %}
-      <a href="{% url 'ship_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
-      {% endif %}
+      <a href="{% url 'ship_edit' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+      <a href="{% url 'logs' %}" class="top-menu"><span class="glyphicon glyphicon-folder-open"></span></a>
       <h1><a href="/">Jason's Battleships</a></h1>
     </div>
     <div class="content container">
@@ -24,3 +23,8 @@
     </div>
     </body>
 </html>
+
+<!--      
+#{% if user.is_authenticated %}
+#{% endif %}
+-->

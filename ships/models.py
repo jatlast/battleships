@@ -51,6 +51,7 @@ class ShipsLog(models.Model):
     inserted = models.DateTimeField(blank=True, null=True)
     exceptxt = models.CharField(max_length=255, blank=True, null=True)
     querytxt = models.CharField(max_length=255, blank=True, null=True)
+    errtxt = models.CharField(max_length=255, blank=True, null=True)
     msgtxt = models.CharField(max_length=255, blank=True, null=True)
     key1 = models.CharField(max_length=32, blank=True, null=True)
     val1 = models.CharField(max_length=32, blank=True, null=True)

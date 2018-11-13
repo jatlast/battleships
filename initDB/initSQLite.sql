@@ -61,11 +61,12 @@ DROP TABLE IF EXISTS ShipsLog;
 
 CREATE TABLE ShipsLog
   (
-      uid INTEGER PRIMARY KEY,
+      logid INTEGER PRIMARY KEY,
       author VARCHAR(32),
       inserted DATETIME,
       exceptxt VARCHAR(255),
       querytxt VARCHAR(255),
+      errtxt VARCHAR(255),
       msgtxt VARCHAR(255),
       key1 VARCHAR(32),
       val1 VARCHAR(32),

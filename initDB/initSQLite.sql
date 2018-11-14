@@ -79,6 +79,12 @@ CREATE TABLE ShipsLog
       key5 VARCHAR(32),
       val5 VARCHAR(32)
    );
+-- Informational and required, first log insert
+INSERT INTO ShipsLog (logid, author, inserted, exceptxt, querytxt, errtxt, msgtxt
+       	    	     , key1, val1, key2, val2, key3, val3, key4, val4, key5, val5)
+              VALUES (0, 'jatlast', datetime('now'), 'exceptxt: exceptions', 'querytxt: SQL', 'errtxt: errors'
+	             , 'msgtxt: informational', 'key1', 'val1', 'key2', 'val2', 'key3', 'val3', 'key4', 'val4'
+		     , 'key5', 'val5');
 --------------------------------
 								    
 ----------------------------

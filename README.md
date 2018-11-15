@@ -10,7 +10,7 @@ Choose a suitable language/technology/(ies) and implement connection to a databa
 Once connected to the database, your code should do the following:
     (a)	Process (eg., display) multiple rows from a query result
     (b)	Have a multi-statement transaction, where all statements succeed and the transaction commits
-    (c)	Have a multi-statement transaction, where the earlier statements succeed and the later statement fails. In this case, the whole transaction must be rolled back.
+    (c)	Have a multi-statement transaction, where the earlier statements succeed, and the later statement fails. In this case, the whole transaction must be rolled back.
 
 ## Preconceived Notions
 
@@ -25,9 +25,9 @@ Motivation: Become familiar with the following.
 3) Developing with Python (3.6 or above - mostly due to "f-strings")
 4) Any open source, Python Web framework (narrowed down to the following two)
     a) Flask (discarded after reading, "Pirates use Flask, the Navy uses Django")
-    b) Django (used 2.1, but dissapointed to discover its lacking stored procedure support)
-5) Any open source database (ordered from least to most desiarable)
-    a) Sqlite (settled for Sqlite3 because none of the three support stored procedures in any current version available for Raspberry Pi B boards and because I thought I would deploy on pythonanywhere.com with less installation difficulties)
+    b) Django (used 2.1, but disappointed to discover its lacking stored procedure support)
+5) Any open source database (ordered from least to most desirable)
+    a) SQLite (settled for Sqlite3 because none of the three support stored procedures in any current version available for Raspberry Pi B boards and because I thought I would deploy on pythonanywhere.com with less installation difficulties)
     b) MySQL (aka, MariaDB)
     c) PostgreSQL
 6) GitHub (a very powerful tool ignored for too long)
@@ -35,7 +35,7 @@ Motivation: Become familiar with the following.
 
 ## Getting Started
 
-For old coders with a hint of Python experience - completely unfamiliar with today's Web Frameworks - having a go with Dajango Girl's Blog Tutorial is one of the many useful starting points (https://tutorial.djangogirls.org/en/).
+For old coders with a hint of Python experience - completely unfamiliar with today's Web Frameworks - having a go with Django Girl's Blog Tutorial is one of the many useful starting points (https://tutorial.djangogirls.org/en/).
 
 ### Prerequisites
 

@@ -1,6 +1,6 @@
 # battleships
 
-Battleships is the result of the following homework assignment.
+The result of the following homework assignment.
 
 Master's Degree: University of Michigan - Computer Science & Information Systems
 Course: CSC 582 - Advanced Database Concepts

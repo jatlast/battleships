@@ -17,6 +17,10 @@ Once connected to the database, your code should do the following:
 1) All modern databases support Stored Procedures
 2) All modern application development frameworks designed to work with databases support stored procedures.
 
+Because both were incorrect, the views.py is an unsightly mixture of raw SQL (intending to satisfy the "transaction rollback" requirement of the assignment) and Django "create" statements (intending to learn the "right way" while working with Django).
+
+Perhaps, the most useful portion of the project is the logging via the DB, which includes file names, line numbers, and dates -- a potentially useful feature of any project. 
+
 ## Chosen Technologies
 
 Motivation: Become familiar with the following.

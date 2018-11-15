@@ -8,9 +8,9 @@ Course: CSC 582 - Advanced Database Concepts
 Assignment: Application Development Project: Due Nov 14, 11:59 pm
 Choose a suitable language/technology/(ies) and implement connection to a database.
 Once connected to the database, your code should do the following:
-    (a)	Process (eg., display) multiple rows from a query result
-    (b)	Have a multi-statement transaction, where all statements succeed and the transaction commits
-    (c)	Have a multi-statement transaction, where the earlier statements succeed, and the later statement fails. In this case, the whole transaction must be rolled back.
+1) Process (eg., display) multiple rows from a query result
+2) Have a multi-statement transaction, where all statements succeed and the transaction commits
+3) Have a multi-statement transaction, where the earlier statements succeed, and the later statement fails. In this case, the whole transaction must be rolled back.
 
 ## Preconceived Notions
 

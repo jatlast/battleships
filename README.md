@@ -68,7 +68,7 @@ For old coders with a hint of Python experience - completely unfamiliar with tod
     (myvenv) $ python manage.py runserver 192.168.1.100:8000
 8) Point a browser to your (hopefully) running Web instance of "Jason's Battleship"
 
-It will not be accessable after this semester ends, however, anyone should be able to reach my currently running example: http://68.41.17.188:58201
+It will not be accessable after this semester ends, however, anyone should be able to reach my currently running example: http://50.197.97.9:58201
 
 ## License
 
